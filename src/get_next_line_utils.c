@@ -6,7 +6,7 @@
 /*   By: tel-dana <tel-dana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:40:59 by tel-dana          #+#    #+#             */
-/*   Updated: 2022/09/05 16:38:40 by tel-dana         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:49:52 by tel-dana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ void	*ft_calloc_gnl(int count, int size)
 
 	p = malloc(count * size);
 	if (p == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 	i = 0;
 	str = (char *)p;
 	while (i < size)

@@ -6,7 +6,7 @@
 /*   By: tel-dana <tel-dana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:06:05 by tel-dana          #+#    #+#             */
-/*   Updated: 2022/09/05 16:41:44 by tel-dana         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:51:39 by tel-dana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*read_and_stash(int fd, char *stash, char *buffer)
 		if (count == -1)
 		{
 			free(buffer);
+			free(stash);
 			return (NULL);
 		}
 		if (count == 0)
